@@ -280,65 +280,24 @@
         </div>
         <?php include 'footer.php';?>
         <script>
-            var autoScrollTimer = 2500;
-            var scrollspeed = 2000;
-            var v;
-            $(document).ready(function () {
-              $('#carousel').carousel({
-                time_constant: scrollspeed,
-                dist: 0,
-                shift: 0,
-                padding: 20,
-                full_width: true,
-                indicators: true,
-                duration:100,
-              });
-              autoScrollQuick();
-              initializeCarousel();
-            });
+                           // CAROUSEL
+                $(document).ready(function(){
+                  $('.carousel').carousel(
+                  {
+                    dist: 0,
+                    padding: 0,
+                    fullWidth: true,
+                    indicators: true,
+                    duration: 100,
+                  }
+                  );
+                });
 
-            $('.carousel.carousel-slider').carousel({fullWidth: true,indicators: true});
-				var autoplay = true;
-				setInterval(function() { if(autoplay) $('.carousel.carousel-slider').carousel('next'); }, 4500);
-			
-			$('.carousel.carousel-slider').hover(function(){ autoplay = false; },function(){ autoplay = true; });
-           
-            $('#carousel').mouseleave(function () {
-              autoScrollQuick();
-            });
-            
-            function autoScroll() {
-              v = setInterval(next, autoScrollTimer);
-            }
-            function autoScrollQuick() {
-              setTimeout(next, 0);
-              autoScroll();
-            }
-            function stopScroll() {
-              clearInterval(v);
-              $('#carousel').carousel({
-                time_constant: 0
-              });
-            }
-            function next() {
-              $('#carousel').carousel('next');
-            }
-            function prev() {
-              $('#carousel').carousel('prev');
-            }
-            $('.marquee').marquee({
-              //speed in milliseconds of the marquee
-              duration: 9000,
-              //gap in pixels between the tickers
-              gap: 0,
-              //time in milliseconds before the marquee will start animating
-              delayBeforeStart: 0,
-              //'left' or 'right'
-              direction: 'up',
-              //true or false - should the marquee be duplicated to show an effect of continues flow
-              duplicated: true,
-              pauseOnHover: true
-            });
+                autoplay()   
+                function autoplay() {
+                    $('.carousel').carousel('next');
+                    setTimeout(autoplay, 4500);
+                }
         </script>
         <script type="text/javascript">
             $(".card").mouseenter(function(e){

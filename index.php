@@ -96,68 +96,48 @@
         <div class="_wrapper">
             <?php include 'navbar.php';?>
             <!--slider-->
-            <div class="carousel carousel-slider" data-indicators='true'>
-                 <div class="carousel-item">
-
+            <div class="slider"  style="overflow: hidden;">
+                <ul class="slides">                    
+                    <li>
                         <img src="img/indexslider/aam_2019.jpg" />
-                </div>
-                <div>
+                    </li>
+                    <li>
                         <img id="img1" src="img/indexslider/sac-logo.jpg"/>
-                </div>
-                <div>
+                    </li>
+                    <li>
                         <img src="img/indexslider/acap.jpg" width="100%" />
-                </div>
-                    <div class='carousel-item'>
-
+                    </li>
+                    <li>
                         <img src="img/indexslider/sam4.jpg" />
-                   
-                    </div>
-                    <div class='carousel-item'>
-
+                    </li>
+                    <li>
                         <img src="img/indexslider/mentorship1.jpg"/>
-             
-                    </div>
-                    <div class='carousel-item'>
-
+                    </li>
+                    <li>
                         <img src="img/indexslider/phonathon1.jpg" />
-             
-                    </div>
-                    <div class='carousel-item'>
-
+                    </li>
+                    <li>
                         <img src="img/indexslider/guest.jpg"/>
-                   
-                    </div>
-                    <div class='carousel-item'>
-
+                    </li>
+                    <li>
                         <img src="img/indexslider/imprint.jpg"/>
-                 
-                    </div>
-                    <div class='carousel-item'>
-
+                    </li>
+                    <li>
                         <img src="img/indexslider/yoy1.jpg"/>
-                    
-                    </div>
-                    <div class='carousel-item'>
-
+                    </li>
+                    <li>
                         <img src="img/indexslider/alvida.jpg"/>
-                  
-                    </div>
-                    <div class='carousel-item'>
-
+                    </li>
+                    <li>
                         <img src="img/indexslider/convo.jpg"/>
-                   
-                    </div>
-
-                 </div>
-                      
-                        
-
+                    </li>
+                </ul>
             </div>
             <!--1st Row-->
             <div>                
-            <div style="margin-top: 30px">
+                <div style="margin-top: 30px">
                     <div class="row" style="min-height: 400px">
-                        <div class="col l3 eventscol" style="margin-top: 1.7em;">
+                        <div class="col l3 eventscol" style="margin-top: 1.5em;">
                             <div class="row z-depth-1" style="background-color: white"><center><p style="font-size:25;color: black;padding-top: 15px;margin-bottom: 15px;"><b>Notice Board</b></p></center></div>
                             <br>                                                    
                             <div class="row z-depth-1 marquee" id="mholder data" style="background-color: white;height:240px;overflow:hidden;padding:5px;margin-top:-13.5%;overflow:  hidden;">
@@ -229,7 +209,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col l3" style="margin-top: 2.1em;height:450px">
+                        <div class="col l3" style="margin-top: 1.9em;height:450px">
                             <div id="fbplug" style="background-color: #fff" class="z-depth-1 fb-page" data-href="https://www.facebook.com/iitkgp.alumnicell/?fref=ts" data-tabs="timeline" data-height="485px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" style="height: 450px">
                                 <blockquote cite="https://www.facebook.com/iitkgp.alumnicell/?fref=ts" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/iitkgp.alumnicell/?fref=ts">Alumni Cell, IIT Kharagpur</a></blockquote>
                             </div>
@@ -300,26 +280,24 @@
         </div>
         <?php include 'footer.php';?>
         <script>
-            var autoScrollTimer = 2500;
-            var scrollspeed = 2000;
-            var v;
-            $(document).ready(function(){
-              $('.carousel').carousel(
-              {
-                dist: 0,
-                padding: 0,
-                fullWidth: true,
-                indicators: true,
-                duration: 100,
+                           // CAROUSEL
+                $(document).ready(function(){
+                  $('.carousel').carousel(
+                  {
+                    dist: 0,
+                    padding: 0,
+                    fullWidth: true,
+                    indicators: true,
+                    duration: 100,
                   }
                   );
                 });
 
-                autoplay();   
+                autoplay()   
                 function autoplay() {
                     $('.carousel').carousel('next');
                     setTimeout(autoplay, 4500);
-                            }
+                }
         </script>
         <script type="text/javascript">
             $(".card").mouseenter(function(e){
