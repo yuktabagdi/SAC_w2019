@@ -135,9 +135,9 @@
             </div>
             <!--1st Row-->
             <div>                
-                <div style="margin-top: 30px">
+<div style="margin-top: 30px">
                     <div class="row" style="min-height: 400px">
-                        <div class="col l3 eventscol" style="margin-top: 1em;">
+                        <div class="col l3 eventscol" style="margin-top: 1.5em;">
                             <div class="row z-depth-1" style="background-color: white"><center><p style="font-size:25;color: black;padding-top: 15px;margin-bottom: 15px;"><b>Notice Board</b></p></center></div>
                             <br>                                                    
                             <div class="row z-depth-1 marquee" id="mholder data" style="background-color: white;height:240px;overflow:hidden;padding:5px;margin-top:-13.5%;overflow:  hidden;">
@@ -189,7 +189,7 @@
                                                                 
                             </div>                            
                         </div>
-                        <div class="col l6" style="margin-top: 10px">
+                        <div class="col l6" style="margin-top: 1px">
                             <div class="heading">
                                 <center><h class="subheading"><b>About Us</b></h></center>
                             </div>
@@ -209,7 +209,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col l3" style="margin-top: 1em;height:450px">
+                        <div class="col l3" style="margin-top: 1.9em;height:450px">
                             <div id="fbplug" style="background-color: #fff" class="z-depth-1 fb-page" data-href="https://www.facebook.com/iitkgp.alumnicell/?fref=ts" data-tabs="timeline" data-height="485px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" style="height: 450px">
                                 <blockquote cite="https://www.facebook.com/iitkgp.alumnicell/?fref=ts" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/iitkgp.alumnicell/?fref=ts">Alumni Cell, IIT Kharagpur</a></blockquote>
                             </div>
