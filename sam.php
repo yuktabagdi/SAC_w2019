@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Student Alumni Meet &middot; IIT Kharagpur</title>
-        <link rel="icon"  href="img/meet_14.png">
+        <link rel="icon"  href="img/meet_14.png" >
         <link rel="stylesheet" href="css/materialize.min.css">
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
         <script src="js/materialize.min.js"></script>
@@ -52,7 +52,7 @@
                         <div class="heading ac-head" style="border:3px black solid; display: inline-block; padding-top: 2px; margin: 3px;padding-right: 20px;padding-left: 20px;margin-top: 30px;" >
                             <h4><b>Student Alumni Meet</b></h4>
                         </div>
-                        <p class="summit text_align" style="padding:1% 10% 6% 10%;">
+                        <p class="summit text_align" style="padding:1% 10% 6% 10%; font-size:17px; ">
                             IIT Kharagpur, a premier institute of the nation has a vast alumni network spread over various locations across the world. With an aim to bring together the students and the alumni, not just in the 
                             premises of the institute, but also regionally, Student Alumni Meets have been initiated. In collaboration with the regional chapters, Student Alumni Meets bring together the students and the alumni 
                             under one roof and encourage interactive dialogue. They play a very important role in strengthening the bond with alumni.The aim of these meets is to connect the alumni and the 
