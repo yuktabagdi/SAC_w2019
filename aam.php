@@ -1,5 +1,5 @@
 <?php
-/*
+
 if(isset($_POST['action'])){
   session_start();
 if ($_SESSION["email"] != "") {
@@ -17,7 +17,7 @@ $sql = "SELECT email, password FROM users";
 $result = $connection->query($sql);
 if ($result->num_rows > 0) {
   // output num rows
-  while ($row = $result->fetch_assoc()) {
+  while ($row = $result->fetch_assoc())  {
     // echo "email: " . $row["email"]. " - password: " . $row["password"]."<br>";
     if ($email == $row["email"]) {
       if ($password == $row["password"]) {
@@ -25,7 +25,7 @@ if ($result->num_rows > 0) {
         $connection->close();
         header('Location: ./home.php');
         exit;
-      /*
+      }
       else {
         header('Location: ./signin.php?err=pass');
       }
@@ -39,8 +39,7 @@ if ($result->num_rows > 0) {
   exit;
 }
 }
-}
-*/
+
 ?>
 
 
@@ -105,19 +104,6 @@ else
         });
 
       });
-</script> 
-<script type="text/javascript">
-  $(function () {
-      $('#sweetalert').on('click', function () {
-          swal({
-  title: "SORRY!",
-  text: "Registrations have been closed",
-  icon: "error",
-  buttons: true,
-  dangerMode: true,
-});
-      });
-  });
 </script>
 
 
@@ -143,13 +129,13 @@ else
 <style type="text/css">
 .hr{
 
-	align-conten
+  align-conten
 }
    
    #button{
 
     padding:10px;
-   	display:inline;
+    display:inline;
    }
 
    @media only screen and (min-width: 768px){
@@ -194,14 +180,14 @@ else
     left:0px;
 }
   #button{
-  	display: inherit;
-  	width: 300px;
-  	padding: 0px
+    display: inherit;
+    width: 300px;
+    padding: 0px
 
   }
  .hr{
 
- 	margin-left: 13%;
+  margin-left: 13%;
  }
 
   }
@@ -216,24 +202,28 @@ else
       <div class="col l9"><img style="width: 98%;padding: 10px 30px 10px 10px" src="img/15th_aam/aam_cover.jpg"></div>
       <div class="col l3" style="margin-top:3%;margin-left: -2.5%">
           <div align="center" style="font-size: 25px;font-weight: 700">
-              17th Annual Alumni Meet
+              17th Annual Alumni Meet 
+          </div><br>
+          <div align="center" style="font-size: 20px;font-weight: 350">
+              (10th - 12th January 2020) 
           </div>
           <div style="margin-top: 30%"><a class="waves-effect waves-light btn-large modal-trigger" href="#modal1" style="width: 105%" >LOGIN</a>
-              <br><br><a class="waves-effect waves-light btn" id="sweetalert" style="width: 105%;height: 5em">17th Annual Alumni Meet <br> Registration</a>
+              <br><br><a class="waves-effect waves-light btn" href="signup.php" style="width: 105%;height: 5em">17th Annual Alumni Meet <br> Registration</a>
           </div>
+
           </div></div>
   <div class="row">
   <div class="col l12 s12 m12">
     <center>
-	  <div class="heading ac-head" style="border:3px black solid;display:inline-block;padding-top:2px;margin:3px;padding-right:20px;padding-left:20px;">
+    <div class="heading ac-head" style="border:3px black solid;display:inline-block;padding-top:2px;margin:3px;padding-right:20px;padding-left:20px;">
         <h4 style="margin-bottom: 0px;" ><b>16th Annual Alumni Meet</b> </h4> <br>
-      	<h5  style="margin-top: 0px;">11th to 13th January, 2019</h5>
+        <h5  style="margin-top: 0px;">11th to 13th January, 2019</h5>
       </div>
     </center>
     <center>
-  	<p style="width:90%;padding:10px;font-size:17px;text-align:justify">
-  		We live our day to day lives oblivious to the beauty that surrounds us and by the time we do realise what exactly it is that we've been blessed with, it's generally too late. However when the good ol' days call yet again, nostalgia surrounds us as we walk the hallowed boulevards of our youth. The Annual Alumni Meet brings to our alumni a chance to reconnect with their Alma Mater. It lets them relive the carefree days of their college lives as they get a chance to visit all the locations they once frequented.<br><br>The <b>16th Annual Alumni Meet</b> was organised from <b>11th to 13th January, 2019</b> at our Institute campus. This year the <b>batch of 1969</b>, the <b> batch of 1979</b> and the <b> batch of 1994</b> were the special guests of honor. The Meet is now a major event anticipated by both the alumni and the students. As the years pass by and winds of change keep blowing, the Alumni Meet too shall keep evolving with the pace of time, hoping to bring to the alumni an experience that they may cherish all their lives.
-  	</p>
+    <p style="width:90%;padding:10px;font-size:17px;text-align:justify">
+      We live our day to day lives oblivious to the beauty that surrounds us and by the time we do realise what exactly it is that we've been blessed with, it's generally too late. However when the good ol' days call yet again, nostalgia surrounds us as we walk the hallowed boulevards of our youth. The Annual Alumni Meet brings to our alumni a chance to reconnect with their Alma Mater. It lets them relive the carefree days of their college lives as they get a chance to visit all the locations they once frequented.<br><br>The <b>16th Annual Alumni Meet</b> was organised from <b>11th to 13th January, 2019</b> at our Institute campus. This year the <b>batch of 1969</b>, the <b> batch of 1979</b> and the <b> batch of 1994</b> were the special guests of honor. The Meet is now a major event anticipated by both the alumni and the students. As the years pass by and winds of change keep blowing, the Alumni Meet too shall keep evolving with the pace of time, hoping to bring to the alumni an experience that they may cherish all their lives.
+    </p>
   </center>
   </div>
 </div>
@@ -270,174 +260,185 @@ else
   <!-- login Modal end -->
 <div class="images" style="background:white;">
   <div class="row">
-  	<div class="col l6">
+    <div class="col l6">
       <center>
-      	<br>
-  		<img src="img/14th_aam/reunion.jpg" style="width:90%;">
-  	  </center>
-  	</div>
-  	<div class="col l6">
-  	  <br>
-  	  <center>
-  	  	<h4 style="padding-top:20px">Grand Reunion</h4>
-  		<p style="width:90%;padding:20px;font-size:17px">
-  			Students' Alumni Cell recently organised 16th Annual Alumni Meet which was a fun and fascinating trip down the memory lane that gave our alumni an opportunity to see old friends again and catch up with them. They came across places and stories that were almost forgotten. Some things changed, some stayed the same. After some great conversation, all those years wherein they had not seen each other seem to just fade away. You would never want to miss the excitement and renewed camaraderie during the reunion.
-  		</p>
-  	  </center>
-  	</div>
+        <br>
+      <img src="img/16th_aam/AAM_Grand_reunion_.jpg" style="width:90%;">
+      </center>
+    </div>
+    <div class="col l6">
+      <br>
+      <center>
+        <h4 style="padding-top:20px">Grand Reunion</h4>
+      <p style="width:90%;padding:20px;font-size:17px">
+        Students' Alumni Cell recently organised 16th Annual Alumni Meet which was a fun and fascinating trip down the memory lane that gave our alumni an opportunity to see old friends again and catch up with them. They came across places and stories that were almost forgotten. Some things changed, some stayed the same. After some great conversation, all those years wherein they had not seen each other seem to just fade away. You would never want to miss the excitement and renewed camaraderie during the reunion.
+      </p>
+      </center>
+    </div>
   </div>
   <hr class="hr" style="color:grey;width:70%">
   <div class="row">
-  	<div class="col l6">
-  	  <br>
-  	  <center>
-  	  	<h4 style="padding-top:20px">Arena</h4>
-  		<p style="width:90%;padding:20px;font-size:17px">
-  			The Arena unveiled itself in all its glory on Day 1 of the 16th Annual Alumni Meet. What took months of planning and diligent execution was finally ready to welcome the alumni. For the first time, Chai-Cheddis-Charcha was introduced wherein the alumni shared their old memories with us. During the time of illumination, the arena had a spectacular view. Without any doubt, Arena has always been the charm of the Alumni Meet.
-  		</p>
-  	  </center>
-  	</div>
-  	<div class="col l6">
+    <div class="col l6">
+      <br>
       <center>
-      	<br>
-  		<img src="img/14th_aam/arena.jpg" style="width:90%;">
-  	  </center>
-  	</div>
+        <h4 style="padding-top:20px">Arena</h4>
+      <p style="width:90%;padding:20px;font-size:17px">
+        The Arena unveiled itself in all its glory on Day 1 of the 16th Annual Alumni Meet. What took months of planning and diligent execution was finally ready to welcome the alumni. For the first time, Chai-Cheddis-Charcha was introduced wherein the alumni shared their old memories with us. During the time of illumination, the arena had a spectacular view. Without any doubt, Arena has always been the charm of the Alumni Meet.
+      </p>
+      </center>
+    </div>
+    <div class="col l6">
+      <center>
+        <br>
+      <img src="img/16th_aam/AAM_arena_.jpg" style="width:90%;">
+      </center>
+    </div>
   </div>
   <hr class="hr" style="color:grey;width:70%">
   <div class="row">
-  	<div class="col l6">
+    <div class="col l6">
       <center>
-      	<br>
-  		<img src="img/14th_aam/dept_visit.jpg" style="width:90%;">
-  	  </center>
-  	</div>
-  	<div class="col l6">
-  	  <br>
-  	  <center>
-  	  	<h4 style="font-style:;padding-top:20px">Department Visit</h4>
-  		<p style="width:90%;padding:20px;font-size:17px">
-  			Sweet and salty memories of slogging in labs, fighting sleep and attempting to learn is something that all our departments gave us. If IIT Kharagpur was a temple of knowledge then our department is where the main shrine of this temple resides. A visit back to this shrine is sure to bring back the blended feelings of hard work, procrastination, learning and excitement.
-  		</p>
-  	  </center>
-  	</div>
+        <br>
+      <img src="img/16th_aam/AAM_Dep_visit_.jpg" style="width:90%;">
+      </center>
+    </div>
+    <div class="col l6">
+      <br>
+      <center>
+        <h4 style="font-style:;padding-top:20px">Department Visit</h4>
+      <p style="width:90%;padding:20px;font-size:17px">
+        Sweet and salty memories of slogging in labs, fighting sleep and attempting to learn is something that all our departments gave us. If IIT Kharagpur was a temple of knowledge then our department is where the main shrine of this temple resides. A visit back to this shrine is sure to bring back the blended feelings of hard work, procrastination, learning and excitement.
+      </p>
+      </center>
+    </div>
   </div>
   <hr class="hr" style="color:grey;width:70%">
   <div class="row">
-  	<div class="col l6">
-  	  <br>
-  	  <center>
-  	  	<h4 style="font-style:;padding-top:20px">Musical Night</h4>
-  		<p style="width:90%;padding:20px;font-size:17px">
-  			Music has been the one thing common in our lives. It has always helped us connect with people. So, taking a trip back to memory lane, Students' alumni cell presented Eastern Technology Music Society that took our alumni back, straight to their KGP days. The Alumni exercised their vocal chords and sang, just like they used to do in their college days. 
-  		</p>
-  	  </center>
-  	</div>
-  	<div class="col l6">
+    <div class="col l6">
+      <br>
       <center>
-      	<br>
-  		<img src="img/14th_aam/musical_night.jpg" style="width:90%;">
-  	  </center>
-  	</div>
+        <h4 style="font-style:;padding-top:20px">Musical Night</h4>
+      <p style="width:90%;padding:20px;font-size:17px">
+        Music has been the one thing common in our lives. It has always helped us connect with people. So, taking a trip back to memory lane, Students' alumni cell presented Eastern Technology Music Society that took our alumni back, straight to their KGP days. The Alumni exercised their vocal chords and sang, just like they used to do in their college days. 
+      </p>
+      </center>
+    </div>
+    <div class="col l6">
+      <center>
+        <br>
+      <img src="img/16th_aam/AAM_musical_night_.jpg" style="width:90%;">
+      </center>
+    </div>
   </div>
   <hr class="hr" style="color:grey;width:70%">
   <div class="row">
-  	<div class="col l6">
+    <div class="col l6">
       <center>
-      	<br>
-  		<img src="img/14th_aam/hall_visit.jpg" style="width:90%;">
-  	  </center>
-  	</div>
-  	<div class="col l6">
-  	  <br>
-  	  <center>
-  	  	<h4 style="font-style:;padding-top:20px">Hall Visit</h4>
-  		<p style="width:90%;padding:20px;font-size:17px">
-  			Every KGPian shares a strong bond with their Hall. Visiting a place where we spent the 4 most important years of our life is a stimulus enough to send shivers down our body. The place where we learnt and lived is sure to have latched a fragment of our soul inside it. To come back to our hall of residence is nothing less than a reunion of the parts of our soul. The alumni got the chance to walk through the corridors and reminisce the impressions that they left. 
-  		</p>
-  	  </center>
-  	</div>
+        <br>
+      <img src="img/16th_aam/AAM_Hall_Visit_.jpg" style="width:90%;">
+      </center>
+    </div>
+    <div class="col l6">
+      <br>
+      <center>
+        <h4 style="font-style:;padding-top:20px">Hall Visit</h4>
+      <p style="width:90%;padding:20px;font-size:17px">
+        Every KGPian shares a strong bond with their Hall. Visiting a place where we spent the 4 most important years of our life is a stimulus enough to send shivers down our body. The place where we learnt and lived is sure to have latched a fragment of our soul inside it. To come back to our hall of residence is nothing less than a reunion of the parts of our soul. The alumni got the chance to walk through the corridors and reminisce the impressions that they left. 
+      </p>
+      </center>
+    </div>
   </div>
   <hr class="hr" style="color:grey;width:70%">
   <div class="row">
-  	<div class="col l6">
-  	  <br>
-  	  <center>
-  	  	<h4 style="padding-top:20px">Campus Tour</h4>
-  		<p style="width:90%;padding:20px;font-size:17px">
-  			In the progressive world we live in, there are a lot of changes and yet a lot of constants remain too. The pleasure pulses kick in when we get to see the same old buildings and roads lying in harmony with the new developments all around. Campus Tour is our way of showing the 2200 acre campus in a nutshell and highlighting all the major developments around.
-  		</p>
-  	  </center>
-  	</div>
-  	<div class="col l6">
+    <div class="col l6">
+      <br>
       <center>
-      	<br>
-  		<img src="img/14th_aam/campus_tour.jpg" style="width:90%;">
-  	  </center>
-  	</div>
+        <h4 style="padding-top:20px">Campus Tour</h4>
+      <p style="width:90%;padding:20px;font-size:17px">
+        In the progressive world we live in, there are a lot of changes and yet a lot of constants remain too. The pleasure pulses kick in when we get to see the same old buildings and roads lying in harmony with the new developments all around. Campus Tour is our way of showing the 2200 acre campus in a nutshell and highlighting all the major developments around.
+      </p>
+      </center>
+    </div>
+    <div class="col l6">
+      <center>
+        <br>
+      <img src="img/16th_aam/AAM_campus_tour_.jpg" style="width:90%;">
+      </center>
+    </div>
   </div>
   
   <hr class="hr" style="color:grey;width:70%">
   <div class="row">
-  	<div class="col l6">
-  	  <br>
-  	  <center>
-  	   <h4 style="font-style:;padding-top:20px">Entertainia</h4>
-  		<p style="width:90%;padding:20px;font-size:17px">
-  			Smiles can cast the most powerful spell of love and happiness. With Kenny Sebastian taking the tough task to fill the open air theatre with a burst of laughter, the event became one of the most talked about event of the meet. The alumni as well as the students had a great time laughing their heart out.
-  		</p>
-  	  </center>
-  	</div>
-  	<div class="col l6">
+
+    <div class="col l6">
       <center>
-      	<br>
-  		<img src="img/14th_aam/entertania.jpg" style="width:90%;">
-  	  </center>
-  	</div>
+        <br>
+      <img src="img/16th_aam/AAM_Entertainia_.jpg" style="width:90%;">
+      </center>
+    </div>
+
+    <div class="col l6">
+      <br>
+      <center>
+       <h4 style="font-style:;padding-top:20px">Entertainia</h4>
+      <p style="width:90%;padding:20px;font-size:17px">
+        Smiles can cast the most powerful spell of love and happiness. With Kenny Sebastian taking the tough task to fill the open air theatre with a burst of laughter, the event became one of the most talked about event of the meet. The alumni as well as the students had a great time laughing their heart out.
+      </p>
+      </center>
+    </div>
+    
   </div>
   <hr class="hr" style="color:grey;width:70%">
   <div class="row">
-  	<div class="col l6">
+
+    
+    <div class="col l6">
+      <br>
       <center>
-      	<br>
-  		<img src="img/14th_aam/illu.jpg" style="width:90%;">
-  	  </center>
-  	</div>
-  	<div class="col l6">
-  	  <br>
-  	  <center>
-  	  	<h4 style="font-style:;padding-top:20px">Illumination</h4>
-  		<p style="width:90%;padding:20px;font-size:17px">
-  			An evening of Euphoria as the name suggests fills the hearts of all the people present with a sense of serenity and calm. The Illumination with diyas followed by the release of sky lanterns creates an aura of happiness all around. With all this we move to the DJ night around the bonfire that beautifully escalates the emotions all around and the alumni do "shake a leg". 
-  		</p>
-  	  </center>
-  	</div>
+        <h4 style="font-style:;padding-top:20px">Illumination</h4>
+      <p style="width:90%;padding:20px;font-size:17px">
+        An evening of Euphoria as the name suggests fills the hearts of all the people present with a sense of serenity and calm. The Illumination with diyas followed by the release of sky lanterns creates an aura of happiness all around. With all this we move to the DJ night around the bonfire that beautifully escalates the emotions all around and the alumni do "shake a leg". 
+      </p>
+      </center>
+
+
+    </div>
+
+    <div class="col l6">
+      <center>
+        <br>
+      <img src="img/16th_aam/AAM_Illu_DJ_Bonfire_.jpg" style="width:90%;">
+      </center>
+    </div>
   </div>
   <hr class="hr" style="color:grey;width:70%">
   <div class="row">
-  	<div class="col l6">
-  	  <br>
-  	  <center>
-  	  <h4 style="font-style:;padding-top:20px">2.2 Marathon</h4>
-  		<p style="width:90%;padding:20px;font-size:17px">
-  			The iconic marathon track that our campus possesses is inviting enough for everyone to run their problems off. With the alumni coming back after such a long time the Institute fails not to teach them a thing or two again with the run for health in the 2.2 marathon organized early in the morning. Students and alumni run together to foster the spirit of good health and harmony. 
-  		</p>
-  	  </center>
-  	</div>
-  	<div class="col l6">
+
+    <div class="col l6">
       <center>
-      	<br>
-  		<img src="img/14th_aam/marathon.jpg" style="width:90%;">
-  	  </center>
-  	</div>
+        <br>
+      <img src="img/16th_aam/AAM_marathon_.jpg" style="width:90%;">
+      </center>
+    </div>
+
+    <div class="col l6">
+      <br>
+      <center>
+      <h4 style="font-style:;padding-top:20px">2.2 Marathon</h4>
+      <p style="width:90%;padding:20px;font-size:17px;">
+        The iconic marathon track that our campus possesses is inviting enough for everyone to run their problems off. With the alumni coming back after such a long time the Institute fails not to teach them a thing or two again with the run for health in the 2.2 marathon organized early in the morning. Students and alumni run together to foster the spirit of good health and harmony. 
+      </p>
+      </center>
+    </div>
+    
   </div>
 </div>
 <hr class="hr" style="color:grey;width:70%">
 </div>
 <div class="photos" style="padding-bottom:10px">
   <center>
-  	<p style="width:90%;padding:5px;display: inline;font-size:17px">For more photos, kindly click on:</p>
-  	<a id="button" class="waves-effect waves-light btn" href=" https://goo.gl/photos/iDMk6fwtfjKMyVAw8">16th Annual Alumni Meet Memories</a>
+    <p style="width:90%;padding:5px;display: inline;font-size:17px">For more photos, kindly click on:</p>
+    <a id="button" class="waves-effect waves-light btn" href=" https://goo.gl/photos/iDMk6fwtfjKMyVAw8">16th Annual Alumni Meet Memories</a>
   </center>
 </div>
 <?php include"footer.php";  ?>

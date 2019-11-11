@@ -108,7 +108,7 @@
       <center>
         <p style="font-style:italic;font-size:18px" id="about-bold"><b>''We are each other's harvest,<br>We are each other's business,<br>We are each other magnitude and bond.''</b></p>
       </center>
-    <p class="text_align" id="about" style="padding:1% 10% 6% 10%;">
+    <p class="text_align" id="about" style="padding:1% 10% 6% 10%; font-size:17px;">
       The vision of the Indian Institutes of Technology has been to contribute to India and the world by imrovising scientific and technical education in India, to generate enormous research opportunities and to remain a source of pride for all Indians. <b>Students&#39 Pan IIT Alumni Relation Cell i.e., SPARC</b> is an umbrella organization covering student executed alumni relation bodies of all the Indian Institutes of Technology. SPARC is an initiative that aims at providing a strong fraternity amongst the IIT alumni such that the human potential successfully developed to its fullest in the course of years can be helpful to a much larger scale in grooming the next generation of IITians.
      
     </p>

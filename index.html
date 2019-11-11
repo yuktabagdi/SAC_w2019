@@ -6,6 +6,31 @@
         <link rel="icon" href="img/meet_14.png">
         <link rel="stylesheet" href="css/materialize.min.css">
         <script src="js/materialize.min.js"></script>
+        <script type="text/javascript">
+            var deadline = new Date("jan 10, 2020 12:00:00").getTime();
+        
+            var x = setInterval(function() {
+            
+            var now = new Date().getTime();
+            var t = deadline - now;
+            var days = Math.floor(t / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+            var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((t % (1000 * 60)) / 1000);
+            document.getElementById("day").innerHTML =days ;
+            document.getElementById("hour").innerHTML =hours;
+            document.getElementById("minute").innerHTML = minutes; 
+            document.getElementById("second").innerHTML =seconds; 
+            if (t < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML = "TIME UP";
+                    document.getElementById("day").innerHTML ='0';
+                    document.getElementById("hour").innerHTML ='0';
+                    document.getElementById("minute").innerHTML ='0' ; 
+                    document.getElementById("second").innerHTML = '0'; }
+            }, 1000);
+
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/style.css">        
@@ -82,75 +107,7 @@
             border-top-color: rgb(221,221,221);
             }
 
-            .countdownContainer{
-                position:absolute;
-                
-                text-align: center;
-                background: #ddd;
-                border: 1px solid #999;
-                padding: 10px;
-                box-shadow: 0 0 5px 3px #ccc;
-                width:30%;
-                height: 6%;
-
-            }
-
-            .info {
-                font-size: 80px;
-            }
-
-            td{
-                text-align: center;
-            }
-
-            tr{
-                text-align: center;
-            }
-
-
         </style>
-
-        <script type='text/javascript'>
-
-            function countdown(){
-                var now = new Date();
-                var eventDate= new Date(2016, 11, 25);
-                var currentTime = now.getTime();
-                var eventDate= evenDate.getTime();
-                var remTime = eventTime -currentTime; 
-                var s = Math.floor(remTime/1000);
-                var m = Math.floor(s/60 ); 
-                var h = Math.floor(m/60); 
-                var d = Math.floor(h/24);
-
-                h%=24; 
-                m%=60; 
-                s%=60; 
-
-                if (h<10){
-                    h= '0' + h; 
-
-                }
-
-                m = (m<10) ? '0'+ m : m;
-                s = (s<10) ? '0' +s :s; 
-
-                document.getElementById('days').innerText d;
-                document.getElementById('days').textContent = d;
-                document.getElementById('hours').textContent = h;
-
-                document.getElementById('minutes').textContent = m;
-
-                document.getElementById('seconds').textContent = s;
-
-                setTimeout(countdown, 1000);
-            }
-
-        </script>
-
-
-
-
     </head>
     <body>
         <div id="fb-root"></div>
@@ -202,15 +159,43 @@
                     </li>
                 </ul>
             </div>
-            <!--1st Row-->
             
-            <div>                
-                <div style="margin-top: 30px">
-                    <div class="row" style="min-height: 800px">
-                        <div class="col l3 eventscol " style="margin-top: 7.85em;">
-                            <div class="row z-depth-1" style="background-color: white"><center><p style="font-size:25;color: black;padding-top: 15px;margin-bottom:15px;"><b>Notice Board</b></p></center></div>
+            <!--1st Row-->
+            <div> 
+                               
+                <div style="margin-top: 40px">
+                    <div class="row" style="min-height: 400px">
+                    
+                        <div class="col l3 eventscol" style="margin-top: 1em;">
+                            
+                        <div class="row z-depth-1" style="background-color: white">
+            
+            <div id="clockdiv" style="background-color:white; padding:5px;">
+            
+            <div>
+            <span class="days" id="day"></span>
+            <div class="smalltext">DAYS</div>
+            </div>
+            <div>
+              <span class="hours" id="hour"></span>
+              <div class="smalltext">HOURS</div>
+            </div>
+            <div>
+              <span class="minutes" id="minute"></span>
+              <div class="smalltext">MINUTES</div>
+            </div>
+            <div>
+              <span class="seconds" id="second"></span>
+              <div class="smalltext">SECONDS</div>
+            </div><br>
+            <p style="font-size:19;color: #64bae4">Annual Alumni Meet 2019</p>
+            
+          </div>
+          </div>
+
+                            <div class="row z-depth-1" style="background-color: white"><center><p style="font-size:25;color: black;padding-top: 15px;margin-bottom: 15px;"><b>Notice Board</b></p></center></div>
                             <br>                                                    
-                            <div class="row z-depth-1 marquee" id="mholder data" style="background-color: white;height:240px;overflow:hidden;padding:5px;margin-top:-13.5%;overflow:  hidden; height:47%">
+                            <div class="row z-depth-1 marquee" id="mholder data" style="background-color: white;height:240px;overflow:hidden;padding:5px;margin-top:-13.5%;overflow:  hidden;">
                                 <div class="row">
                                     <div class="card horizontal marqueeElement" style="font-size: 14px;margin-top: -5%" >
                                         <div class="card-stacked">
@@ -259,12 +244,12 @@
                                                                 
                             </div>                            
                         </div>
-                        <div class="col l6" style="margin-top: 1px">
+                        <div class="col l6" style="margin-top: -29px" >
                             <div class="heading">
-                                <center><h class="subheading"><b>About Us</b></h></center>
+                                <center><h class="subheading" style='top: 30px;' ><b>About Us</b></h></center>
                             </div>
-                            <div style="background-color: white;">
-                                <p class="z-depth-1 text_align" style="font-size: 16px;padding: 1.9em 2.3em">
+                            <div style="background-color: white; ">
+                                <p class="z-depth-1 text_align" style="font-size: 16px;padding: 1.9em 2.3em;">
                                     The Students' Alumni Cell, IIT Kharagpur is a voluntary student body working under the aegis
                                     of the Dean of Alumni Affairs and International Relations. It strives to bridge the gap between
                                     IIT Kharagpur and its esteemed alumni community.<br>
@@ -279,7 +264,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col l3" style="margin-top: 1.9em;height:450px">
+                        <div class="col l3" style="margin-top: 1em;height:450px">
                             <div id="fbplug" style="background-color: #fff" class="z-depth-1 fb-page" data-href="https://www.facebook.com/iitkgp.alumnicell/?fref=ts" data-tabs="timeline" data-height="485px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" style="height: 450px">
                                 <blockquote cite="https://www.facebook.com/iitkgp.alumnicell/?fref=ts" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/iitkgp.alumnicell/?fref=ts">Alumni Cell, IIT Kharagpur</a></blockquote>
                             </div>
@@ -350,7 +335,7 @@
         </div>
         <?php include 'footer.php';?>
         <script>
-                             var autoScrollTimer = 2500;
+            var autoScrollTimer = 2500;
             var scrollspeed = 2000;
             var v;
             $(document).ready(function () {

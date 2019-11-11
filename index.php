@@ -8,7 +8,34 @@
         <script src="js/materialize.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/style.css">        
+        <link rel="stylesheet" type="text/css" href="css/style.css">  
+        
+        <script type="text/javascript">
+            var deadline = new Date("jan 10, 2020 12:00:00").getTime();
+        
+            var x = setInterval(function() {
+            
+            var now = new Date().getTime();
+            var t = deadline - now;
+            var days = Math.floor(t / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+            var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((t % (1000 * 60)) / 1000);
+            document.getElementById("day").innerHTML =days ;
+            document.getElementById("hour").innerHTML =hours;
+            document.getElementById("minute").innerHTML = minutes; 
+            document.getElementById("second").innerHTML =seconds; 
+            if (t < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML = "TIME UP";
+                    document.getElementById("day").innerHTML ='0';
+                    document.getElementById("hour").innerHTML ='0';
+                    document.getElementById("minute").innerHTML ='0' ; 
+                    document.getElementById("second").innerHTML = '0'; }
+            }, 1000);
+
+        </script>
+        
         <style>
             ul.indicators{z-index: 3;}
             .slider .indicators .indicator-item{ height: 10px; width: 50px; border-radius: 0px; margin: 5px 12px; background-color: #a4a9b2; }
@@ -99,19 +126,19 @@
             <div class="slider"  style="overflow: hidden;">
                 <ul class="slides">                    
                     <li>
-                        <img src="img/indexslider/aam_2019.jpg" />
+                        <img src="img/indexslider/17th_aam.jpg" />
                     </li>
                     <li>
                         <img id="img1" src="img/indexslider/sac-logo.jpg"/>
                     </li>
                     <li>
-                        <img src="img/indexslider/acap.jpg" width="100%" />
+                        <img src="img/indexslider/acap2019.jpg" width="100%" />
                     </li>
                     <li>
                         <img src="img/indexslider/sam4.jpg" />
                     </li>
                     <li>
-                        <img src="img/indexslider/mentorship1.jpg"/>
+                        <img src="img/indexslider/MENTORSHIPbnew.jpg"/>
                     </li>
                     <li>
                         <img src="img/indexslider/phonathon1.jpg" />
@@ -123,7 +150,7 @@
                         <img src="img/indexslider/imprint.jpg"/>
                     </li>
                     <li>
-                        <img src="img/indexslider/yoy1.jpg"/>
+                        <img src="img/indexslider/yoy_slide.jpg"/>
                     </li>
                     <li>
                         <img src="img/indexslider/alvida.jpg"/>
@@ -134,11 +161,39 @@
                 </ul>
             </div>
             <!--1st Row-->
-            <div>                
+             <div> 
+                               
                 <div style="margin-top: 30px">
                     <div class="row" style="min-height: 400px">
-                        <div class="col l3 eventscol" style="margin-top: 1.5em;">
-                            <div class="row z-depth-1" style="background-color: white"><center><p style="font-size:25;color: black;padding-top: 15px;margin-bottom: 15px;"><b>Notice Board</b></p></center></div>
+                    
+                        <div class="col l3 eventscol" style="margin-top: 1em;">
+                            
+                        <div class="row z-depth-1" style="background-color: white">
+            
+                            <div id="clockdiv" style="background-color:white; padding:5px;">
+
+                            <div>
+                            <span class="days" id="day"></span>
+                            <div class="smalltext">DAYS</div>
+                            </div>
+                            <div>
+                              <span class="hours" id="hour"></span>
+                              <div class="smalltext">HOURS</div>
+                            </div>
+                            <div>
+                              <span class="minutes" id="minute"></span>
+                              <div class="smalltext">MINUTES</div>
+                            </div>
+                            <div>
+                              <span class="seconds" id="second"></span>
+                              <div class="smalltext">SECONDS</div>
+                            </div><br>
+                            <p style="font-size:19;color: #64bae4">Annual Alumni Meet 2020</p>
+
+                          </div>
+                          </div>
+                            
+                       <div class="row z-depth-1" style="background-color: white"><center><p style="font-size:25;color: black;padding-top: 15px;margin-bottom: 15px;"><b>Notice Board</b></p></center></div>
                             <br>                                                    
                             <div class="row z-depth-1 marquee" id="mholder data" style="background-color: white;height:240px;overflow:hidden;padding:5px;margin-top:-13.5%;overflow:  hidden;">
                                 <div class="row">
@@ -189,7 +244,7 @@
                                                                 
                             </div>                            
                         </div>
-                        <div class="col l6" style="margin-top: 1px">
+                        <div class="col l6" style="margin-top: 10px">
                             <div class="heading">
                                 <center><h class="subheading"><b>About Us</b></h></center>
                             </div>
@@ -209,7 +264,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col l3" style="margin-top: 1.9em;height:450px">
+                        <div class="col l3" style="margin-top: 1em;height:450px">
                             <div id="fbplug" style="background-color: #fff" class="z-depth-1 fb-page" data-href="https://www.facebook.com/iitkgp.alumnicell/?fref=ts" data-tabs="timeline" data-height="485px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" style="height: 450px">
                                 <blockquote cite="https://www.facebook.com/iitkgp.alumnicell/?fref=ts" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/iitkgp.alumnicell/?fref=ts">Alumni Cell, IIT Kharagpur</a></blockquote>
                             </div>
@@ -280,24 +335,58 @@
         </div>
         <?php include 'footer.php';?>
         <script>
-                           // CAROUSEL
-                $(document).ready(function(){
-                  $('.carousel').carousel(
-                  {
-                    dist: 0,
-                    padding: 0,
-                    fullWidth: true,
-                    indicators: true,
-                    duration: 100,
-                  }
-                  );
-                });
-
-                autoplay()   
-                function autoplay() {
-                    $('.carousel').carousel('next');
-                    setTimeout(autoplay, 4500);
-                }
+            var autoScrollTimer = 2500;
+            var scrollspeed = 2000;
+            var v;
+            $(document).ready(function () {
+              $('#carousel').carousel({
+                time_constant: scrollspeed,
+                dist: 0,
+                shift: 0,
+                padding: 20,
+                full_width: false
+              });
+              autoScrollQuick();
+              initializeCarousel();
+            });
+            $('#carousel').mouseenter(function () {
+              stopScroll();
+            });
+            $('#carousel').mouseleave(function () {
+              autoScrollQuick();
+            });
+            function autoScroll() {
+              v = setInterval(next, autoScrollTimer);
+            }
+            function autoScrollQuick() {
+              setTimeout(next, 0);
+              autoScroll();
+            }
+            function stopScroll() {
+              clearInterval(v);
+              $('#carousel').carousel({
+                time_constant: 0
+              });
+            }
+            function next() {
+              $('#carousel').carousel('next');
+            }
+            function prev() {
+              $('#carousel').carousel('prev');
+            }
+            $('.marquee').marquee({
+              //speed in milliseconds of the marquee
+              duration: 9000,
+              //gap in pixels between the tickers
+              gap: 0,
+              //time in milliseconds before the marquee will start animating
+              delayBeforeStart: 0,
+              //'left' or 'right'
+              direction: 'up',
+              //true or false - should the marquee be duplicated to show an effect of continues flow
+              duplicated: true,
+              pauseOnHover: true
+            });
         </script>
         <script type="text/javascript">
             $(".card").mouseenter(function(e){
